@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Useless but Clean Website</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #left-ad, #right-ad {
+      width: 120px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 16px;
+      color: #666;
+      user-select: none;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+    }
+
+    #left-ad {
+      border-right: none;
+    }
+    #right-ad {
+      border-left: none;
+    }
+
+    #main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+      overflow-y: auto;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px;
+      font-size: 28px;
+      width: 100%;
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      left: 120px;
+      right: 120px;
+      z-index: 10;
+    }
+
+    main {
+      margin-top: 90px; /* header height + some spacing */
+      flex-grow: 1;
+    }
+
+    #counter {
+      margin: 20px 0;
+      font-size: 20px;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 24px;
+      background: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background: #990000;
+    }
+
+    #warning {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #ff9900;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 10px;
+      background: #eee;
+      font-size: 14px;
+      color: #666;
+      width: 100%;
+      box-sizing: border-box;
+      position: fixed;
+      bottom: 30px;
+      left: 120px;
+      right: 120px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    #bottom-ad {
+      position: fixed;
+      bottom: 0;
+      left: 120px;
+      right: 120px;
+      height: 30px;
+      background: #ccc;
+      color: #444;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      user-select: none;
+      border-top: 1px solid #aaa;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="left-ad">Left Ad Placeholder</div>
+
+  <div id="main-content">
+    <header>Welcome to the Clean Yet Useless Website</header>
+
+    <main>
+      <div id="counter">Time wasted here: <span id="seconds">0</span> seconds</div>
+
+      <button onclick="triggerUseless()">Mat Dabao</button>
+
+      <div id="warning">⚠️ Ye site tumhare time ki barbaadi ke liye bani hai</div>
+    </main>
+
+    <footer>© 2025 Total Waste Pvt. Ltd. | You’re still here? 😂</footer>
+  </div>
+
+  <div id="right-ad">Right Ad Placeholder</div>
+  <div id="bottom-ad">Bottom Ad Placeholder</div>
+
+  <script>
+    let sec = 0;
+    setInterval(() => {
+      document.getElementById("seconds").innerText = ++sec;
+    }, 1000);
+
+    const redirects = [
+      "https://longdogechallenge.com/",
+      "https://pointerpointer.com/",
+      "https://cat-bounce.com/",
+      "https://jacksonpollock.org/",
+      "https://burymewithmymoney.com/",
+      "https://eelslap.com/",
+      "https://paint.toys/",
+      "https://memory.toys/classic/easy/",
+      "https://memory.toys/maze/easy/",
+      "https://memory.toys/monkey-challenge/easy/",
+      "https://clicking.toys/",
+      "https://checkbox.toys/",
+      "https://binarypiano.com/",
+      "https://boringboringboring.com/",
+      "https://thezen.zone/",
+      "https://smashthewalls.com/",
+      "https://mondrianandme.com/",
+      "https://rotatingsandwiches.com/",
+      "https://toybox.toms.toys/",
+      "https://toms.toys/",
+      "https://puginarug.com/",
+      "https://zoomquilt.org/",
+      "https://greatbignothing.com/",
+      "https://dadlaughbutton.com/",
+      "https://remoji.com/",
+      "https://loopedforinfinity.com/",
+      "https://end.city/",
+      "https://elonjump.com/",
+      "https://www.bouncingdvdlogo.com/",
+      "https://checkboxrace.com/",
+      "https://strobe.cool/",
+      "https://alwaysjudgeabookbyitscover.com/",
+      "https://maze.toys/mazes/mini/daily/",
+      "https://sliding.toys/mystic-square/8-puzzle/daily/",
+      "https://sliding.toys/mystic-square/15-puzzle/daily/",
+      "https://clicking.toys/flip-grid/neat-nine/3-holes/",
+      "https://puginarug.com/",
+      "https://paint.toys/calligram/",
+      "https://memory.toys/classic/easy/",
+      "https://paint.toys/",
+      "https://checkbox.toys/scale/",
+      "https://binarypiano.com/",
+      "https://mondrianandme.com/",
+      "https://onesquareminesweeper.com/",
+      "https://cursoreffects.com/",
+      "https://jacksonpollock.org/",
+      "https://burymewithmymoney.com/",
+      "https://cat-bounce.com/",
+      "https://smashthewalls.com/",
+      "https://paint.toys/",
+      "https://memory.toys/",
+      "https://checkboxrace.com/",
+      "https://toms.toys/",
+      "https://pointerpointer.com/",
+      "https://strobe.cool/",
+      "https://memory.toys/maze/easy/",
+      "https://boringboringboring.com/",
+      "https://number.toys/",
+      "https://card.toys/",
+      "https://greatbignothing.com/",
+      "https://zoomquilt.org/",
+      "https://dadlaughbutton.com/",
+      "https://remoji.com/",
+      "https://loopedforinfinity.com/",
+      "https://www.ripefordebate.com/",
+      "https://end.city/",
+      "https://elonjump.com/",
+      "https://www.bouncingdvdlogo.com/",
+      "https://toybox.toms.toys/",
+      "https://memory.toys/monkey-challenge/easy/",
+      "https://theuselessweb.com/"
+    ];
+
+    function triggerUseless() {
+      const link = redirects[Math.floor(Math.random() * redirects.length)];
+      window.open(link, '_blank');
+    }
+  </script>
+</body>
+</html>
